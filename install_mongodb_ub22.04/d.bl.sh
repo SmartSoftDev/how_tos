@@ -10,7 +10,7 @@ gblcmd_install_mongodb_ub22.04(){
     wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
     sudo apt update
     echo "Install mongo DB"
-    sudo apt install mongodb-org
+    sudo apt install -y mongodb-org
     echo "Install at startup ..."
     sudo systemctl start mongod
     sudo systemctl enable mongod
