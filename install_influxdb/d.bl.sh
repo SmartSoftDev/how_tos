@@ -6,7 +6,8 @@ gblcmd_install_influxdb_ub22(){
     sudo cp ./influxdata.list /etc/apt/sources.list.d/
     echo "Install influx"
     sudo apt update
-    sudo apt install -y influxdb
+    sudo apt install -y influxdb2 influxdb2-cli
+    sudo systemctl daemon-reload
     sudo systemctl start influxdb
     sudo systemctl enable influxdb
     echo "Done"
